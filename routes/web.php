@@ -15,12 +15,12 @@ $router->get('/', function () use ($router) {
     return "ok";
 });
 
-$router->post('/api/login', 'ExampleController@postLogin');
-$router->post('/api/register', 'APIController@register');
+// $router->post('/api/login', 'ExampleController@postLogin');
+// $router->post('/api/register', 'APIController@register');
 
-$router->group(['middleware'=>"auth"],function($router){
+// $router->group(['middleware'=>"auth"],function($router){
 
 
-});
-$router->get('/api/list', 'APIController@getUsers');
-$router->post('/api/list', 'APIController@order');
+// });
+// $router->get('/api/list', 'APIController@getUsers');
+// $router->post('/api/list', 'APIController@order');
