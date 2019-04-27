@@ -8,7 +8,7 @@ class ResponseBuilder{
        return[
            "success"=>$status,
            "information"=>$info,
-           "data"=>$data
+           "token"=>$data
        ];
     }
 }

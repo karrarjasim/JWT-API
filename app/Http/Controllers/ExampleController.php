@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\JWTAuth;
+use App\Http\Helper\ResponseBuilder;
 
 class ExampleController extends Controller
 {
@@ -43,8 +44,11 @@ class ExampleController extends Controller
             return response()->json(['token_absent' => $e->getMessage()], 500);
 
         }
+         $status=true;
+         $info="Authentication successful!";
+         return ResponseBuilder::reslut($status,$info,$token);
 
-        return response()->json(compact('token'));
+       
     }
     public function test()
     {
